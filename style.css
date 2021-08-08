@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital@1&display=swap');
+
+
+:root {
+    --primary: #B6DBE7;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+
+}
+
+.heading {
+    text-align: center;
+    /* width: 40vw; */
+    font-size: 10vh;
+    margin: 0;
+}
+
+input {
+    width: 10vw;
+    height: 4vh;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.upper {
+    position: relative;
+    background-color: var(--primary);
+    width: 95vw;
+    z-index: 1;
+    height: 0.001vh;
+    /*   top: 150px; */
+    /* margin: auto; */
+    /*   border-radius: 50%; */
+    transition: box-shadow 3s ease ease-out;
+
+    opacity: 0.9;
+    box-shadow: 15px 30px 710px 150px var(--primary);
+}
+
+.lower {
+    position: absolute;
+    background-color: var(--primary);
+    width: 95vw;
+    height: 0.001vh;
+    margin: auto;
+    top: 90vh;
+    opacity: 0.9;
+    /* left: 1px; */
+    box-shadow: 5px 1px 120px 150px var(--primary);
+    transition: all 3s ease ease-out;
+
+}
+
+.content {
+    position: absolute;
+    /* filter: brightness(20%); */
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 40%);
+    width: 60vw;
+    border-radius: 1rem;
+    height: 60vh;
+    background-color: white;
+    opacity: 0.8;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    font-size: 3vmin;
+    padding: 1rem;
+    color: black;
+}
+
+.calculate {
+    margin: 2rem 0rem;
+    width: 7vw;
+    height: 5vh;
+    border: 2px solid #222163;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.result-statement {
+    /* position: absolute; */
+    /* border: 1px solid black; */
+    width: 80vw;
+    margin-top: 10px;
+    height: 7vh;
+    text-align: center;
+    margin: auto;
+    font-size: larger;
+
+}
