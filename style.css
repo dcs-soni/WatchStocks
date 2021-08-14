@@ -31,9 +31,6 @@ input {
     width: 95vw;
     z-index: 1;
     height: 0.001vh;
-    /*   top: 150px; */
-    /* margin: auto; */
-    /*   border-radius: 50%; */
     transition: box-shadow 3s ease ease-out;
 
     opacity: 0.9;
@@ -63,7 +60,7 @@ input {
     transform: translate(-50%, 40%);
     width: 60vw;
     border-radius: 1rem;
-    height: 60vh;
+    height: 70vh;
     background-color: white;
     opacity: 0.8;
     flex-direction: column;
@@ -96,4 +93,45 @@ label {
     margin: auto;
     font-size: larger;
 
+}
+
+.loading {
+    display: none;
+}
+
+.loading img {
+    width: 10rem;
+    height: 10rem;
+    margin: 2rem auto;
+}
+
+.github-logo {
+    position: absolute;
+    right: 2rem;
+    width: 1.5rem;
+    top: 1rem;
+    z-index: 1;
+
+}
+
+
+@media only screen and (max-width: 900px) {
+    .heading {
+        font-size: 8vh;
+        margin-top: 3rem;
+    }
+
+    .github-logo {
+        top: -2rem;
+        right: 1rem;
+    }
+
+    .content {
+        width: 70vw;
+    }
+
+    input,
+    .calculate {
+        width: 25vw;
+    }
 }
