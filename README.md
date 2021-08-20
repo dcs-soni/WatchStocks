@@ -4,14 +4,13 @@
 
 <img src="img/readme-icon.png" width="100" height="120">
 
-
 ## Check out [👉 Live here 👈](https://dcs-watchstocks.netlify.app/)
 
-</div>
+
 
 ---
 
-## ✨ **About** 
+## ✨ **About**
 
 <p>Watch Stocks can be used to calculate the Profit and Loss of the current holdings in your portfolio.</p>
 
@@ -29,8 +28,10 @@
 
 &nbsp;
 
-😉 **Glimpses**
+## 😉 **Glimpses**
 
 <img src="img/readme-desktop-ss.png" width="500" height="300" />&nbsp; &nbsp; &nbsp; <img src="img/readme-mobile-ss.png" width="200" height="300" />
 
+
+</div>
 ---
