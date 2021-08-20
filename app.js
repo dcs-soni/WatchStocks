@@ -1,9 +1,15 @@
+// Shades of uppe and lower
 const upperShade = document.querySelector(".upper");
 const lowerShade = document.querySelector(".lower");
+
 const calculateButton = document.querySelector(".calculate");
+
+// Inputs
 const inputBuyingPrice = document.querySelector(".buying-price");
 const inputCurrentPrice = document.querySelector(".current-price");
 const inputQuantity = document.querySelector(".quantity");
+
+//Results and gifs
 const resultStatement = document.querySelector(".result-statement");
 const loadingGIF = document.querySelector(".loading")
 
@@ -18,11 +24,12 @@ function calculate() {
 
     let buyingValue = buyingQuantity * buyingPrice;
     let currentValue = buyingQuantity * currentPrice;
-
+    // In profit or loss?
     let totalValuation = currentValue - buyingValue;
     let totalPercentage = totalValuation * 100 / buyingValue;
 
-    if(buyingPrice === 0 || buyingQuantity === 0){
+    if(buyingPrice <= 0 || buyingQuantity <= 0){
+        loadingGIF.style.display = "none";
         resultStatement.innerText = "Invalid Values.."
     } 
     else if(totalValuation >= 1){
@@ -32,7 +39,7 @@ function calculate() {
             upperShade.style.boxShadow = "15px 30px 710px 150px green";
             upperShade.style.transition = "3s ease-out";
                 
-    
+            //Color changes to green
             lowerShade.style.boxShadow = "5px 10px 710px 150px green";
             lowerShade.style.transition = "3s ease-out";
         }, 4000);
@@ -44,7 +51,7 @@ function calculate() {
             upperShade.style.boxShadow = "15px 30px 710px 150px red";
             upperShade.style.transition = "3s ease-out";
                 
-    
+            // Color changes to red
             lowerShade.style.boxShadow = "5px 10px 710px 150px red";
             lowerShade.style.transition = "3s ease-out";
         }, 4000);
@@ -53,6 +60,5 @@ function calculate() {
     }
 
 }
-
 
 calculateButton.addEventListener("click", calculate);
