@@ -28,7 +28,7 @@ function calculate() {
     let totalValuation = currentValue - buyingValue;
     let totalPercentage = totalValuation * 100 / buyingValue;
 
-    if(buyingPrice <= 0 || buyingQuantity <= 0){
+    if(buyingPrice <= 0 || buyingQuantity <= 0 || currentPrice <= 0) {
         loadingGIF.style.display = "none";
         resultStatement.innerText = "Invalid Values.."
     } 
@@ -44,7 +44,7 @@ function calculate() {
             lowerShade.style.transition = "3s ease-out";
         }, 4000);
     }
-    else if(totalValuation < 1) {
+    else if(totalValuation < 0) {
         setTimeout(() => {
             loadingGIF.style.display = "none";
             resultStatement.innerText = `OOpsie :( You are in loss of ${Math.abs(totalValuation)} rupees and loss percentage is ${Math.round(Math.abs(totalPercentage))}%`;
@@ -56,6 +56,8 @@ function calculate() {
             lowerShade.style.transition = "3s ease-out";
         }, 4000);
     }else {
+        loadingGIF.style.display = "none";
+
         resultStatement.innerText = "Current price of the stock is same as the buying price. Have patience";
     }
 
